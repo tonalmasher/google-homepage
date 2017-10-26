@@ -4,84 +4,98 @@
 <head>
   <title>Google</title>
   <style>
-    
+  
     body {
       font-family: arial, sans-serif;
     }
     
     div {
-      margin:auto;
-      text-align:center;
+      margin: auto;
+      left: 0;
+      right: 0;
+      overflow: auto;
     }
     
-    .top-nav {
-      padding: 0 10px;
+    #googleLogo {
+      display: block;
+      margin: auto;
+      padding: 180px 0px 20px 0px;
+      height: 6rem;
+      
+    }
+    
+    #search-form, #cool-link {
+      text-align: center;
+    }
+    
+    .top-nav, .bottom-nav {
     }
     
     .bottom-nav {
       position: absolute;
-      margin:auto;
       bottom: 0;
-      left: 0;
-      right: 0;
-      padding: 0 10px;
       background-color: #eee;
     }
     
     ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
+      list-style-type: none;
     }
 
-    .li-left{
-        float: left;
+    li {
+      display: inline-block;
+      padding-right: 15px;
     }
     
-    .li-right{
-        float: right;
-    }
-    
-    .bottom-nav .li-right {
-      position: relative;
-      float: right;
-    }
-
-    li a {
-        display: inline-block;
-        color: #000;
-        text-align: center;
-        padding: 14px 16px;
-        font-size: 13px;
-        opacity: 0.7;
-        text-decoration: none;
+    li a {   
+      color: #000;
+      font-size: 13px;
+      opacity: 0.7;
+      text-decoration: none;
     }
 
     li a:hover {
         text-decoration: underline;
     }
     
-    #googleLogo {
-      padding-top: 180px;
-      padding-bottom: 20px;
-      height: 6rem;
-      width: auto;
+    li img {
+      height: 16px;
+      vertical-align:text-bottom;
+      opacity: 0.6;
+    }
+    
+    li img:hover {
+      opacity: 1;
+    }
+    
+    #signIn {
+      color: white;
+      background-color: #4885ed;
+      padding: 8px 10px;
+      border-radius: 2px;
+      opacity: 1;
+    }
+    
+    img {
+
     }
     
     input[type=text] {
+      display: block;
+      margin: auto;
       width: 40rem;
       padding: 12px 20px;
-      margin: 8px 0;
-      display: inline-block;
       border: 1px solid #ccc;
       border-radius: 0px;
       box-sizing: border-box;
-      box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.2);
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
       background-image: url(https://upload.wikimedia.org/wikipedia/commons/2/22/Google_microphone_logo.png);
       background-size: 14px;
       background-position: 95%;
       background-repeat: no-repeat;
+    }
+    
+    input[type=text]:hover {
+      box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
     }
     
     .button{
@@ -126,18 +140,19 @@
   </style>
 </head>
 
-<!--  img src="https://upload.wikimedia.org/wikipedia/commons/2/22/Google_microphone_logo.png" -->
   
 <body>
+  <div class="top-nav">
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#store">Store</a></li>
+      <li style="float:right;"><a href="#about" id="signIn">Sign In</a></li>
+      <li style="float:right;"><img src="images/keyboard.svg"></li>
+      <li style="float:right;"><a href="#about">Images</a></li>
+      <li style="float:right;"><a href="#contact">Gmail</a></li>
+    </ul>
+  </div>
   <div>
-    <nav class="top-nav">
-      <ul>
-        <li class="li-left"><a href="#about">About</a></li>
-        <li class="li-left"><a href="#store">Store</a></li>
-        <li class="li-right"><a href="#about">Images</a></li>
-        <li class="li-right"><a href="#contact">Gmail</a></li>
-      </ul>
-    </nav>
     <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="Google Logo" id="googleLogo">
   </div>
   <div id="search-form">
@@ -150,17 +165,19 @@
   <div id="cool-link">
     <a href="#">Have you hear about this cool thing?</a>
   </div>
-  <div>
-   <nav class="bottom-nav">
+  <div class="bottom-nav">
      <ul>
-        <li class="li-left"><a href="#advertising">Advertising</a></li>
-        <li class="li-left"><a href="#business">Business</a></li>
-        <li class="li-right"><a href="#settings">Settings</a></li>
-        <li class="li-right"><a href="#terms">Terms</a></li>
-        <li class="li-right"><a href="#privacy">Privacy</a></li>
+        <li><a href="#advertising">Advertising</a></li>
+        <li><a href="#business">Business</a></li>
+        <li style="float:right;"><a href="#privacy">Privacy</a></li>
+        <li style="float:right;"><a href="#terms">Terms</a></li>
+       <li style="float:right;"><a href="#settings">Settings</a></li>
       </ul>
-    </nav>
   </div>
 </body>
 
 </html>
+
+<!--  img src="https://upload.wikimedia.org/wikipedia/commons/2/22/Google_microphone_logo.png" -->
+
+<!-- Google App Grid http://www.myiconfinder.com/uploads/iconsets/ed559f9ab4ee6cec08ffde71c58a68af-grid.png -->
